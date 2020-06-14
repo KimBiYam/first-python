@@ -269,4 +269,80 @@ students = ['홍길동', '강감찬', '이성계', '김창현']
 print('홍길동' in students)
 print('이에스' in students)
 print('홍길동' not in students)
-print('이에스' not in students)
+print('이에스' not in students, end="\n---------\n")
+
+input_name = input("이름을 입력하세요\n:")
+
+# 조건문 파이썬에서는 else if 대신 elif 사용
+if len(input_name) >= 3:
+    print("Hello", input_name)
+else:
+    print("이름은 세글자 이상 입력해주세요")
+
+name = input("이름을 입력하세요\n:")
+
+if name == '김왼손':
+    print('당신이 김왼손이군요!')
+elif name == '호박':
+    print('당신이 호박이군요!')
+elif name == 'Meta':
+    print('당신이 Meta군요!')
+else:
+    print('당신은!?')
+
+count = 0
+while count < 3:
+    print('횟수:', count)
+    count += 1
+
+count = 0
+while count < 10:
+    count += 1
+    if count < 4:
+        continue
+    print('횟수:', count)
+    if count == 8:
+        break
+
+# 딕셔너리
+my_dict = {}
+print(type(my_dict))
+
+my_dict[0] = 'a'
+print(my_dict)
+my_dict['b'] = 2
+my_dict['학생1'] = '홍길동'
+my_dict['학생2'] = '김창현'
+print(my_dict)
+
+print(my_dict['b'])
+
+del my_dict['b']
+del my_dict[0]
+print(my_dict.values())
+
+for std in my_dict.values():
+    print(std)
+
+for key, val in my_dict.items():
+    print(key, val)
+
+
+def add(num1, num2):
+    return num1 + num2
+
+
+print(add(1, 2))
+
+
+def add_mul(num1, num2):
+    return num1 + num2, num1 * num2
+
+
+print(add_mul(1, 2))
+
+my_add, my_mul = add_mul(1, 2)
+print(my_add)
+print(my_mul)
+
+print(random.sample(range(1, 46), 6))
