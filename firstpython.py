@@ -1,3 +1,5 @@
+import datetime
+import time
 import random
 
 print('hello world!')
@@ -346,3 +348,6 @@ print(my_add)
 print(my_mul)
 
 print(random.sample(range(1, 46), 6))
+
+print(time.strftime('%Y-%m-%d', time.localtime(time.time())))
+print(datetime.datetime.now())
